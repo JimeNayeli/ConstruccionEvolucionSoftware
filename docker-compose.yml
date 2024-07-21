@@ -1,0 +1,37 @@
+version: "3.9"
+services:
+  mysql:
+    container_name: auctionappmysql
+    build: mysql
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+  backend:
+    container_name: auctionappbackend
+    build: .
+    ports:
+      - "8081:8080"
+    depends_on:
+      - mysql
+    env_file:
+      - aws-creds.env
+  frontend:
+    container_name: auctionappfrontend
+    build: frontend
+    environment:
+      - WDS_SOCKET_PORT=0
+    ports:
+      - "3001:3000"
+    volumes:
+      - ./frontend/app:/app
+      - /app/node_modules
+
+  webserver:
+    container_name: auctionappnginx
+    build: nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+      - frontend
