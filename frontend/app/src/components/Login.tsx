@@ -57,7 +57,7 @@ const Login = () => {
 
   if (userIsLoggedIn) {
     return <>
-      Ya has iniciado sesión
+      Ya se inicio sesión anteriormente!
     </>
   }
 
