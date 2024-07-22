@@ -1,0 +1,18 @@
+.userDetailsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.image {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.fullName {
+    display: flex;
+    gap: 4px;
+}

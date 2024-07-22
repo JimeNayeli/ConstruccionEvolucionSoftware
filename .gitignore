@@ -37,7 +37,8 @@ mysql/data/*
 
 
 ### Frontend files ###
-frontend/app/*
+#frontend/app/*
+Frontend/app/node_modules
 
 ### Environment variables and secrets ###
 *.env
