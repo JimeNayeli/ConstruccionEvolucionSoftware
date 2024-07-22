@@ -1,0 +1,13 @@
+.profileContainer {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 0.5rem;
+}
+
+.profileImage {
+  width: 250px;
+  height: 250px;
+}

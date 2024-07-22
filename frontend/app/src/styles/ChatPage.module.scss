@@ -1,0 +1,16 @@
+.chatUserContainer {
+  :hover {
+    cursor: pointer;
+    font-weight: bold;
+    color: firebrick;
+
+    img {
+      border: 2px dashed firebrick;
+    }
+  }
+}
+
+.chatUsers {
+  height: 50vh;
+  overflow-y: scroll;
+}
